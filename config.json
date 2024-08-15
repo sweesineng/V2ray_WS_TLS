@@ -8,15 +8,16 @@
     {
       "port": PORT, 
       "listen": "127.0.0.1", 
-      "tag": "vmess-in", 
-      "protocol": "vmess", 
+      "tag": "VLESS-in", 
+      "protocol": "VLESS", 
       "settings": {
         "clients": [
           {
             "id": "UUID", 
             "alterId": 64
           }
-        ]
+        ],
+	      "decryption": "none"
       }, 
       "streamSettings": {
         "network": "ws", 
@@ -54,7 +55,7 @@
       {
         "type": "field",
         "inboundTag": [
-          "vmess-in"
+          "VLESS-in"
         ],
         "outboundTag": "direct"
       }
